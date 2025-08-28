@@ -57,40 +57,55 @@ El principal objetivo es predecir si una persona es saludable o no basándonos e
 
 ## Análisis Exploratorio de Datos (EDA)
 
-Antes de construir el modelo de predicción, se realizará un análisis exploratorio de los datos para entender las relaciones entre las variables y su distribución. Algunas de las visualizaciones que se realizarán incluyen:
+Antes de construir el modelo de predicción, se realizará un análisis exploratorio de los datos para entender las relaciones entre las variables y su distribución. 
 
-- **Distribución de variables numéricas**: Histograma o KDE para ver la forma de las distribuciones.
-- **Relaciones entre variables**: Diagramas de dispersión (scatter plots) para explorar correlaciones entre variables clave como **BMI**, **frecuencia cardíaca** y **presión arterial**.
-- **Detección de outliers**: Boxplots para identificar valores atípicos en las variables numéricas.
-- **Correlación de variables**: Mapa de calor para examinar cómo se correlacionan entre sí las variables numéricas.
+## Selección de variables
 
-## Pasos a Seguir
-
-1. **Carga de los Datos**: Se cargarán los datos en un DataFrame de Pandas.
-2. **Análisis Exploratorio de los Datos (EDA)**: Realizaremos un análisis visual de las variables, explorando distribuciones, relaciones y patrones.
-3. **Preprocesamiento**: Prepararemos los datos para el modelo de Machine Learning. Esto incluye la normalización de variables, la codificación de variables categóricas y la imputación de valores faltantes.
-4. **Modelado**: Aplicaremos diferentes algoritmos de Machine Learning para entrenar modelos y predecir el estado de salud de las personas (por ejemplo, Random Forest, Gradient Boosting, etc.).
+1. **Preprocesamiento**: Prepararemos los datos para el modelo de Machine Learning. Esto incluye la normalización de variables, la codificación de variables categóricas y la imputación de valores faltantes.
+2. **Revisión de varias técnicas**: Se trabajan las diferentes técnicas para conocer cual es la mejor forma para disminuir la cantidad de variables y se explique el 90%. Se revisan técnicas como Filtrado, incrustado, envoltura, PCA y MCA.
+3. **PCA y MCA**: Se escogen las técnicas de PCA para las variables númericas y MCA para las variables categoricas en la reducción de dimensionalidad. Generando un conjunto de datos preparados para la aplicación de Machine Learning.
+4. **Modelado**: Se revisan los diferentes modelos con los datos establecidos. Se revisan modelos como Random Forest, Gradient Boosting, HistGradien Boosting, Extra Trees y Decision Trees.
 5. **Evaluación del Modelo**: Evaluaremos el rendimiento de los modelos utilizando métricas como **precisión**, **recall** y **F1-score**.
 
 ## Requisitos
 
 Este proyecto requiere las siguientes bibliotecas de Python:
 
-- `pandas`: Para manejar y manipular los datos.
-- `matplotlib` y `seaborn`: Para la visualización de los datos.
-- `scikit-learn`: Para la creación y evaluación de los modelos de Machine Learning.
+### `numpy`
+- **Descripción**: `numpy` es la biblioteca fundamental para realizar cálculos numéricos en Python. Proporciona soporte para arrays multidimensionales (`ndarray`) y funciones matemáticas eficientes para trabajar con grandes volúmenes de datos.
+- **Instalación**: `pip install numpy`
+
+### `scipy`
+- **Descripción**: `scipy` se utiliza para resolver problemas científicos y técnicos complejos. Basado en `numpy`, incluye herramientas para álgebra lineal, optimización, estadísticas, y resolución de ecuaciones diferenciales.
+- **Instalación**: `pip install scipy`
+
+### `seaborn`
+- **Descripción**: `seaborn` es una librería de visualización de datos basada en `matplotlib`. Facilita la creación de gráficos estadísticos atractivos y complejos con menos líneas de código.
+- **Instalación**: `pip install seaborn`
+
+### `imbalanced-learn`
+- **Descripción**: `imbalanced-learn` es útil para tratar datasets desbalanceados, proporcionando técnicas como sobremuestreo, submuestreo y SMOTE (Synthetic Minority Over-sampling Technique) para mejorar el rendimiento de los modelos.
+- **Instalación**: `pip install imbalanced-learn`
+
+### `prince`
+- **Descripción**: `prince` es una librería para realizar técnicas de reducción dimensional como el Análisis de Componentes Principales (PCA), el Análisis de Correspondencias (CA) y el Escalado Multidimensional (MDS).
+- **Instalación**: `pip install prince`
+
+### `mca`
+- **Descripción**: `mca` se utiliza para realizar el Análisis de Correspondencias Múltiples (MCA), que es útil para analizar datos categóricos y reducir la dimensionalidad de este tipo de datos.
+- **Instalación**: `pip install mca`
 
 Puedes instalar las dependencias ejecutando:
 
 ```bash
-pip install pandas matplotlib seaborn scikit-learn
+pip install pandas matplotlib seaborn scikit-learn numpy scipy seaborn imbalanced-learn prince mca
 ```
 
 ## Cómo Correr el Proyecto
 
 1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu-usuario/proyecto-salud-ml.git
+   git clone https://github.com/cubicjuan/DiseaseRisk_ML
    ```
 2. Navega al directorio del proyecto:
    ```bash
@@ -98,7 +113,7 @@ pip install pandas matplotlib seaborn scikit-learn
    ```
 3. Corre el script de análisis y modelado:
    ```bash
-   python main.py
+   Trabajofinal.py
    ```
 
 ## Contribuciones
@@ -107,5 +122,5 @@ Las contribuciones a este proyecto son bienvenidas. Si tienes alguna sugerencia 
 
 ---
 
-**Autor**: [Tu Nombre]  
+**Autor**: Juan Francisco Reyes y Mónica Cristancho Ferrer  
 **Fecha**: Agosto 2025  
